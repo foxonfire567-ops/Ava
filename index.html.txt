@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Viki Shop</title>
+</head>
+<script>
+    function createFlower() {
+        const flower = document.createElement("div");
+        flower.textContent = "🌸";
+        flower.style.position = "fixed";
+        flower.style.top = "-50px";
+        flower.style.left = Math.random() * window.innerWidth + "px";
+        flower.style.fontSize = "2em";
+        flower.style.zIndex = "1000";
+        flower.style.transition = "transform 3s linear, opacity 1s ease-out";
+        document.body.appendChild(flower);
+
+        // Gjør blomsten fallende
+        setTimeout(() => {
+            flower.style.transform = `translateY(${window.innerHeight + 50}px)`;
+            flower.style.opacity = "0";
+        }, 100);
+
+        // Fjern blomsten når den når bunnen
+        setTimeout(() => {
+            flower.remove();
+        }, 3000);
+    }
+
+    // Lag blomster med jevne mellomrom
+    setInterval(createFlower, 500);
+</script>
+<body>
+    
+
+    <!-- Logo -->
+    <div align="center" style="margin-top: 20px;">
+        <img src="VIKI SHOP LOGO.png" alt="Viki Shop Logo" style="width: 200px; height: auto;">
+    </div>
+
+    <!-- Hovedinnhold -->
+    <h1 align="center" style="color: #E57BA4; font-size: 3em; margin-top: 20px;">🩷Viki Shop🩷</h1>
+    <h2 align="center" style="color: #FF8FA3; font-size: 2em;">🎀Alt med Hekling!🎀</h2>
+    <hr style="border: 1px solid #FFB7C5; width: 80%;">
+
+    <h2 align="center" style="color: #E57BA4;">💮Om Oss💮</h2>
+    <p align="center" style="font-size: 1.2em; line-height: 1.5;">
+        Hei eg seller ting som eg hekla sjølv og eg elsker det. Det er hobbyen min, og eg lurer på om du vil kjøpe noe fra meg?
+    </p>
+ <p align="center" style="font-size: 1.2em; line-height: 1.5;">
+        Skriv at vis du vil ikkje kjøpe fra meg men vis du vil hjelpe meg da kan du gi meg nye trå da kan du få rabatt på alt 
+    </p>
+        
+    <h2 align="center" style="color: #E57BA4;">🎁Tilbud Tid!🎁</h2>
+    <p align="center" style="font-size: 1.2em; line-height: 1.5;">
+        Hvis du bruker 299kr eller mer på en dag, får du en liten blekksprut, <span style="font-size: 1.3em; color: #FF69B4; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">GRATIS</span>! Jeg har supertilbud nå, så kjøp mens du har tid!
+    </p>
+
+    <hr style="border: 1px solid #FFB7C5; width: 95%;">
+    
+   <!-- Bildegalleri -->
+<div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;">
+    <img src="blekksprut.png" alt="Blekksprut" style="width: 150px; background-color: #E57BA4; height: 150px; object-fit: contain; cursor: pointer; border-radius: 25px;" onclick="showEmoji('🐙')">
+    <img src="bie.png" alt="Bie" style="width: 150px; background-color: #E57BA4; height: 150px; object-fit: contain; cursor: pointer; border-radius: 25px;" onclick="showEmoji('🐝')">
+    <img src="hjerte.png" alt="Hjerte" style="width: 150px; height: 150px; background-color: #E57BA4; object-fit: contain; cursor: pointer; border-radius: 25px;" onclick="showEmoji('❤️')">
+    <img src="donut.png" alt="Donut" style="width: 150px; background-color: #E57BA4; height: 150px; object-fit: contain; cursor: pointer; border-radius: 25px;" onclick="showEmoji('🍩')">
+    <img src="mystery.png" alt="Mystery" style="width: 150px; background-color: #E57BA4; height: 150px; object-fit: contain; cursor: pointer; border-radius: 25px;" onclick="showEmoji('😱')">
+</div>
+    <hr style="border: 1px solid #FFC5D0; width: 70%;">
+    
+    <!-- Produkter og kontaktinformasjon -->
+    <p align="center" style="color: #3A3A3A; font-size: 1.1em;">
+        <strong>🐙Blekksprut🐙</strong><br>
+        Liten:🌸15kr🌸<br>
+        Medium:🌸25kr🌸<br>
+        Stor:🌸100kr🌸<br>
+    </p>
+    <p align="center" style="color: #3A3A3A; font-size: 1.1em;">
+        <strong>🐝Bie🐝</strong><br>
+        Liten:🌸15kr🌸<br>
+        Medium:🌸30kr🌸<br>
+        Stor:🌸50kr🌸<br>
+    </p>
+    <p align="center" style="color: #3A3A3A; font-size: 1.1em;">
+        <strong>❤️Hjerte❤️</strong><br>
+        Liten blandet med medium: 🌸10kr🌸
+ <p align="center" style="color: #3A3A3A; font-size: 1.1em;">
+        <strong>🍩Donut🍩</strong><br>
+        Liten:🌸25kr🌸<br>
+        Medium:🌸45kr🌸<br>
+        Stor(Pute størrelse):🌸140kr🌸
+<p align="center" style="color: #3A3A3A; font-size: 1.1em;">
+        <strong>Mystery</strong><br>
+        Mystery BOX
+Mini:25
+LITTEN:45
+Medium:60
+Stor:95
+Mega stor:120
+    
+    <p align="center" style="font-style: italic; color: #B56576;">
+       🌸Laget av Markus!🌸
+    </p>
+
+    <!-- Kontakt skjema -->
+    <form align="center" action="https://formspree.io/f/mdkojrrb" method="POST" style="width: 90%; max-width: 500px; margin: 0 auto; text-align: center;">
+        <input type="text" name="Mobilnummer" placeholder="Ditt mobilnummer" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #E57BA4; border-radius: 5px;"><br>
+        <input type="text" name="adresse" placeholder="Din adresse(skriv skule om levering på skulen)" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #E57BA4; border-radius: 5px;"><br>
+        <input type="text" name="bestilling" placeholder="Din bestilling" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #E57BA4; border-radius: 5px;"><br>
+        <input type="text" name="name" placeholder="Ditt navn" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #E57BA4; border-radius: 5px;"><br>
+        <textarea name="message" placeholder="Din melding" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #E57BA4; border-radius: 5px;"></textarea><br>
+        <button type="submit" style="background-color: #FF8FA3; color: white; border: none; cursor: pointer; font-size: 1em; padding: 10px 20px; border-radius: 5px;">
+            Send Melding
+        </button>
+    </form>
+
+    <hr style="border: 1px solid #FF9EB0; width: 100%;">
+    
+    <!-- Bunntekst -->
+    <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #FFB7C5; color: #3A3A3A;">
+        <p align="center">🌸Laget av Markus🌸</p>
+        <p align="center">Selging av ting du har kjøpt er IKKJE lov fordi du har godtatt våre regler når du gikk på nettsiden.</p>
+        <p align="center">Navnet på nettsiden og alle produkter er rettigheter av Viki-Shop.</p>
+    </footer>
+
+    <script>
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function showEmoji(emoji) {
+            const emojiElement = document.createElement("div");
+            emojiElement.textContent = emoji;
+            emojiElement.style.position = "fixed";
+            emojiElement.style.top = "50%";
+            emojiElement.style.left = "50%";
+            emojiElement.style.transform = "translate(-50%, -50%)";
+            emojiElement.style.fontSize = "5em";
+            emojiElement.style.zIndex = "1000";
+            emojiElement.style.animation = "fade-out 5s ease forwards";
+
+            document.body.appendChild(emojiElement);
+
+            setTimeout(() => {
+                emojiElement.remove();
+            }, 2250);
+        }
+    </script>
+</body>
+</html>
