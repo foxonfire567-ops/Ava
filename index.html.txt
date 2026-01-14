@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ava</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #9e0303;
+        }
+        .flower {
+            position: fixed;
+            font-size: 2em;
+            z-index: 1000;
+            transition: transform 3s linear, opacity 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.textContent = "❤️🖤❤️";
+            flower.className = "flower";
+            flower.style.top = "-50px";
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            document.body.appendChild(flower);
+
+            // Make the flower fall
+            setTimeout(() => {
+                flower.style.transform = `translateY(${window.innerHeight + 50}px)`;
+                flower.style.opacity = "0";
+            }, 100);
+
+            // Remove the flower when it reaches the bottom
+            setTimeout(() => {
+                flower.remove();
+            }, 3000);
+        }
+
+        // Create flowers at regular intervals
+        setInterval(createFlower, 500);
+    </script>
+
+    <!-- Logo -->
+    <div align="center" style="margin-top: 20px;">
+        <img src="AVA.png" alt="Logo" style="width: 200px; height: auto;">
+    </div>
+
+    <!-- Main Content -->
+    <h1 align="center" style="margin-top: 20px;">❤️Ava🖤</h1>
+    <h2 align="center">🖤Love by Ava❤️</h2>
+    <hr style="border: 1px solid #9e0303; width: 80%;">
+
+    <h2 align="center">🖤About us❤️</h2>
+    <p align="center" style="font-size: 1.2em; line-height: 1.5;">
+        Hey, we are AVA, a company started in a school project called Smart, where children learn how to make and sell a product. This company is mainly owned by Lucas Myklebust (11). But has members that are Markus VS(11) , Johan BH(11) and Adrian TN(11) 
+    </p>
+
+    <hr style="border: 1px solid #9e0303; width: 95%;">
+
+    
+
+    <!-- Products and Contact Information -->
+    <p align="center" style="font-size: 1.1em;">
+        <strong>Wax with love by AVA</strong><br>
+        ❤️70kr🖤<br>
+    </p>
+
+    <p align="center" style="font-style: italic;">
+        🖤Made by Markus!❤️
+    </p>
+
+    <!-- Contact Form -->
+    <form align="center" action="https://formspree.io/f/mdkojrrb" method="POST" style="width: 90%; max-width: 500px; margin: 0 auto; text-align: center;">
+        <input type="text" name="Mobilnummer" placeholder="Your phone number" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #9e0303; border-radius: 5px;"><br>
+        <input type="text" name="adresse" placeholder="Your address" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #9e0303; border-radius: 5px;"><br>
+        <input type="text" name="bestilling" placeholder="Your order" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #9e0303; border-radius: 5px;"><br>
+        <input type="text" name="name" placeholder="Your name" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #9e0303; border-radius: 5px;"><br>
+        <textarea name="message" placeholder="Your message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #9e0303; border-radius: 5px;"></textarea><br>
+        <button type="submit" style="background-color: #5c0303; color: white; border: none; cursor: pointer; font-size: 1em; padding: 10px 20px; border-radius: 5px;">
+            Send Message
+        </button>
+    </form>
+
+    <hr style="border: 1px solid #9e0303; width: 100%;">
+</body>
+</html>
