@@ -96,5 +96,40 @@
     </form>
 
     <hr style="border: 1px solid #9e0303; width: 100%;">
+
+
+<!-- Image Gallery -->
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        width: 80%;
+        margin: 30px auto;
+    }
+    .gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="gallery">
+    <img src="img1.png" alt="Gallery image 1">
+    <img src="img2.png" alt="Gallery image 2">
+    <img src="img3.png" alt="Gallery image 3">
+    <img src="img4.png" alt="Gallery image 4">
+    <img src="img5.png" alt="Gallery image 5">
+    <img src="img6.png" alt="Gallery image 6">
+</div>
+
+  <hr style="border: 1px solid #9e0303; width: 100%;">
+
 </body>
 </html>
